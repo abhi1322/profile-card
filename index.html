@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Social links profile</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .link {
+          @apply overflow-hidden text-white cursor-pointer;
+          position: relative; /* Ensure the parent element is positioned relative */
+        }
+        .link::before {
+          @apply content-[''] w-full h-full absolute top-0 left-0 bg-[#c5f82a] scale-x-0 origin-right transition-transform ease-in-out duration-500;
+        }
+        .link:hover::before {
+          @apply scale-x-100 origin-left transition-transform duration-500;
+        }
+      }
+      /* link2 */
+      .link2 {
+        @apply overflow-hidden text-white cursor-pointer;
+        position: relative; /* Ensure the parent element is positioned relative */
+      }
+      .link2::before {
+        @apply content-[''] w-full h-full absolute top-0 left-0 bg-[#c5f82a] scale-y-0 origin-bottom transition-transform ease-in-out duration-500;
+      }
+      .link2:hover::before {
+        @apply scale-y-100 origin-top transition-transform duration-500;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+    </style>
+  </head>
+  <body
+    class="w-full h-screen font-['Inter'] bg-[#141414] flex justify-center items-center px-8"
+  >
+    <div
+      class="profile-container w-full max-w-[400px] bg-[#1f1f1f] rounded-2xl flex flex-col items-center p-6 text-white text-center"
+    >
+      <img
+        src="/assets/images/avatar-jessica.jpeg"
+        alt="profile-img"
+        class="profile-img rounded-full w-32"
+      />
+      <h1 class="profile-name font-bold text-[22px] mt-4">Jessica Randall</h1>
+      <h6 class="text-[#c5f82a] font-bold mt-2 mb-6">London, United Kingdom</h6>
+      <p class="text-[#fff] opacity-50 mb-4">
+        "Front-end developer and avid reader."
+      </p>
+
+      <!-- buttons -->
+      <div class="w-full flex flex-col gap-4">
+        <a
+          href="https://github.com/abhi1322"
+          class="link group bg-[#333333] w-full h-14 rounded-xl font-semibold flex justify-center items-center text-lg cursor-pointer capitalize"
+        >
+          <p class="group-hover:text-[#000] capitalize z-50">GitHub</p>
+        </a>
+        <a
+          href="https://github.com/abhi1322"
+          class="link2 group bg-[#333333] w-full h-14 rounded-xl font-semibold flex justify-center items-center text-lg cursor-pointer"
+        >
+          <p class="group-hover:text-[#000] capitalize z-50">Frontend mentor</p>
+        </a>
+        <a
+          href="https://github.com/abhi1322"
+          class="link group bg-[#333333] w-full h-14 rounded-xl font-semibold flex justify-center items-center text-lg cursor-pointer capitalize"
+        >
+          <p class="group-hover:text-[#000] capitalize z-50">GitHub</p>
+        </a>
+        <a
+          href="https://github.com/abhi1322"
+          class="link2 group bg-[#333333] w-full h-14 rounded-xl font-semibold flex justify-center items-center text-lg cursor-pointer"
+        >
+          <p class="group-hover:text-[#000] capitalize z-50">LinkedIn</p>
+        </a>
+      </div>
+
+      <!-- GitHub Frontend Mentor LinkedIn
+      Twitter Instagram -->
+    </div>
+
+    <div class="attribution absolute bottom-2 text-white">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/abhi1322">Abhishek kumar</a>.
+    </div>
+  </body>
+</html>
